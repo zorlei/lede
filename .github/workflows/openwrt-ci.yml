@@ -10,9 +10,9 @@
 name: zorlei编译openwrt1.0
 
 on:
-  #push:
-   #branches: 
-      #- CI-master
+  push:
+   branches: 
+      - CI-master
   #     ↑↑↑ 改成你的分支名, 一般是master
   # schedule:
   #   - cron: 0 20 * * *
