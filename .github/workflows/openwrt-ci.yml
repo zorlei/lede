@@ -10,14 +10,11 @@
 name: zorlei编译openwrt1.0
 
 on:
+  schedule:
+    - cron: 0 20 * * *
   push:
-   branches: 
-      - CI-master
-  #     ↑↑↑ 改成你的分支名, 一般是master
-  # schedule:
-  #   - cron: 0 20 * * *
-  # release:
-  #   types: [published]
+    branches:
+      - master 
 
 jobs:
   build:
@@ -28,7 +25,6 @@ jobs:
         uses: actions/checkout@master
         with:
           ref: master
-        #      ↑↑↑ 改成你的分支名, 一般是master
 
       - name: Initialization environment
         env:
